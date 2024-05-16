@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet">
+      
+  <!-- Our custom CSS -->
+  <link rel="stylesheet" href="index.css">
+  <title>Frontend Mentor | Space tourism website</title>
+  <script src="navigation.js" defer></script>
+  <script src="tabs.js" defer></script>
+</head>
+
+<body class="destination">
+  <a class="skip-to-content" href="#main">Skip to content</a>
+  <header class="primary-header flex">
+    <div>
+      <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
+    </div>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
+    <nav>
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span>Home</a>
+            <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html"><span aria-hidden="true">01</span>Languages</a>
+            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span aria-hidden="true">02</span>Instructors</a>
+            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">03</span>Technology</a>
+        </ul>
+    </nav>
+  </header>
+  
+  <main id="main" class="grid-container grid-container--destination flow">
+    <h1 class="numbered-title"><span aria-hidden="true">01</span> Choose your Languages</h1>
+    
+    <picture id="moon-image">
+      <!-- <source srcset="assets/destination/image-moon.webp" type="image/webp"> -->
+      <img src="assets/destination/python-seeklogo.svg" alt="the moon">
+    </picture>
+    <picture hidden id="mars-image">
+      <!-- <source srcset="assets/destination/image-mars.webp" type="image/webp"> -->
+      <img src="assets/destination/c-seeklogo.svg" alt="the planet mars">
+    </picture>
+    <picture hidden id="europa-image">
+      <!-- <source srcset="assets/destination/image-europa.webp" type="image/webp"> -->
+      <img src="assets/destination/ruby-seeklogo.svg" alt="the planet europa">
+    </picture>
+    <picture hidden id="titan-image">
+      <!-- <source srcset="assets/destination/image-titan.webp" type="image/webp"> -->
+      <img src="assets/destination/swift-svgrepo-com.svg" alt="the moon titan">
+    </picture>
+    
+    
+    <div class="tab-list underline-indicators flex" role="tablist" aria-label="destination list">
+        <button aria-selected="true" role="tab" aria-controls="moon-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" data-image="moon-image">Paython</button>
+        <button aria-selected="false" role="tab" aria-controls="mars-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="-1" data-image="mars-image">C plus plus</button>
+        <button aria-selected="false" role="tab" aria-controls="europa-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="-1" data-image="europa-image">Ruby</button>
+        <button aria-selected="false" role="tab" aria-controls="titan-tab" class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="-1" data-image="titan-image">Swift</button>
+    </div>
+
+    <!-- The moon -->
+    <article class="destination-info flow" id="moon-tab" tabindex="0" role="tabpanel">
+      <h2 class="fs-800 uppercase ff-serif">Python </h2>
+
+      <p>Python is developed under an OSI-approved open source license,
+         making it freely usable and distributable, even for commercial use.
+          Python's license is administered by the Python Software Foundation.
+        </p>
+      
+      <div class="destination-meta flex">
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Enrolled students</h3>
+          <p class="ff-serif uppercase">3835</p>
+        </div>
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Est. study time</h3>
+          <p class="ff-serif uppercase">2 months</p>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Mars -->
+    <article hidden class="destination-info flow" id="mars-tab" tabindex="0"  role="tabpanel">
+      <h2 class="fs-800 uppercase ff-serif">C++</h2>
+
+      <p>C++ is a high-level, general-purpose programming language created by Danish computer scientist Bjarne Stroustrup.
+        it has object-oriented, generic, and functional features, in addition to facilities for low-level memory manipulation 
+        for making things like microcomputers or to make operating systems like Linux or Windows.
+    </p>
+      
+      <div class="destination-meta flex">
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Enrolled students</h3>
+          <p class="ff-serif uppercase">2253</p>
+        </div>
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Est. study time</h3>
+          <p class="ff-serif uppercase">1 month</p>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Europa -->
+    <article hidden class="destination-info flow" id="europa-tab" tabindex="0"  role="tabpanel">
+      <h2 class="fs-800 uppercase ff-serif">Ruby</h2>
+
+      <p>A dynamic, open source programming language with a focus
+         on simplicity and productivity. It has an elegant
+          syntax that is natural to read and easy to write.
+          Wondering why Ruby is so popular? Its fans call it a beautiful, 
+          artful language. And yet, they say it’s handy and practical. What gives?
+        </p>
+      <div class="destination-meta flex">
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Enrolled students</h3>
+          <p class="ff-serif uppercase">6283</p>
+        </div>
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Est. study time</h3>
+          <p class="ff-serif uppercase">29 days</p>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Titan -->
+    <article hidden class="destination-info flow" id="titan-tab" tabindex="0"  role="tabpanel">
+      <h2 class="fs-800 uppercase ff-serif">Swift</h2>
+
+      <p>Swift is a general-purpose programming language that’s approachable for newcomers and powerful for experts.
+        It is fast, modern, safe, and a joy to write.Writing Swift is interactive and fun, the syntax is concise yet expressive.
+         Swift code is safe by design and produces software that runs lightning-fast.
+        </p>
+      
+      <div class="destination-meta flex">
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Enrolled students</h3>
+          <p class="ff-serif uppercase">1863</p>
+        </div>
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Est. study time</h3>
+          <p class="ff-serif uppercase">1.5 month</p>
+        </div>
+      </div>
+    </article>
+  </main>
+  
+<body>
+
+
+  
+</body>
+</html>
